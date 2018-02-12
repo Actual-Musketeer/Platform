@@ -1,0 +1,7 @@
+{
+    "version": "0.1",
+    "language": "en",
+    "words": ["truthy", "polyfills", "classlist", "injectable"],
+    "flagWords": ["hte"],
+    "ignorePaths": ["**/node_modules/**", "**/vscode-extension/**", "**/.git/**", ".vscode", "typings", "resources"]
+  }

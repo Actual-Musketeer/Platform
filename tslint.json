@@ -32,7 +32,7 @@
       true,
       140
     ],
-    "member-access": false,
+    "member-access": true,
     "member-ordering": [
       true,
       {
@@ -138,6 +138,16 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+    "trailing-comma": [
+        true,
+        {
+            "multiline": "always",
+            "singleline": "never"
+        }
+    ],
+    "typedef": [true, "call-signature", "parameter", "property-declaration", "member-variable-declaration"],
+    "no-consecutive-blank-lines": [true],
+    "ordered-imports": [true]
   }
 }
