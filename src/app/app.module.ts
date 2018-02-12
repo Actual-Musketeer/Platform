@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
+import { SettingsModule } from './settings/settings.module';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
         FlexLayoutModule,
         MaterialModule,
         PortfolioModule,
+        SettingsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
