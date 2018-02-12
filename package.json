@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "sass-lint": "sass-lint \"src/**/*.scss\" -v -q",
     "spell": "cspell \"src/**/*.ts\"",
-    "style": "prettier --write \"src/**/*.ts\""
+    "style": "prettier -l \"src/**/*.ts\""
   },
   "private": true,
   "dependencies": {
