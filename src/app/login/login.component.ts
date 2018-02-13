@@ -11,8 +11,7 @@ export class LoginComponent {
     constructor(public afAuth: AngularFireAuth) {}
 
     public login(): void {
-        this.afAuth
-            .auth
+        this.afAuth.auth
             .signInWithPopup(new firebase.auth.FacebookAuthProvider())
             .then((result) => {
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
