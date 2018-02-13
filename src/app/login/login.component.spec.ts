@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 import { LoginComponent } from './login.component';
 
@@ -10,6 +11,7 @@ describe('LoginComponent', () => {
         async(() => {
             TestBed.configureTestingModule({
                 declarations: [LoginComponent],
+                providers: [{ provide: AngularFireAuth, useValue: { auth: () => {} } }],
             }).compileComponents();
         }),
     );
