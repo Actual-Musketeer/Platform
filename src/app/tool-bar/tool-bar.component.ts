@@ -11,7 +11,7 @@ import * as User from '../store/user';
     styleUrls: ['./tool-bar.component.scss'],
 })
 export class ToolBarComponent {
-    private user$: Observable<UserState>;
+    public user$: Observable<UserState>;
 
     constructor(private store: Store<AppState>, private afAuth: AngularFireAuth) {
         this.user$ = store.select('user');
