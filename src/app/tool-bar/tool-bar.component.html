@@ -4,9 +4,10 @@
 
     <span fxFlex></span>
 
-    <button mat-icon-button [matMenuTriggerFor]="moreMenu">
-        <mat-icon>more_vert</mat-icon>
+    <button mat-button [matMenuTriggerFor]="moreMenu">
+        <app-avatar [photoUrl]="(user$ | async)?.data.photoURL" [name]="(user$ | async)?.data.displayName"></app-avatar>
     </button>
+
     <mat-menu #moreMenu="matMenu">
         <button mat-menu-item routerLink="/settings">Settings</button>
         <button mat-menu-item>Logout</button>

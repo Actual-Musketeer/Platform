@@ -11,7 +11,16 @@ describe('LoginComponent', () => {
         async(() => {
             TestBed.configureTestingModule({
                 declarations: [LoginComponent],
-                providers: [{ provide: AngularFireAuth, useValue: { auth: () => {} } }],
+                providers: [
+                    {
+                        provide: AngularFireAuth,
+                        useValue: {
+                            auth: {
+                                setPersistence: () => new Promise(() => {}),
+                            },
+                        },
+                    },
+                ],
             }).compileComponents();
         }),
     );

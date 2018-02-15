@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'app-tool-bar',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./tool-bar.component.scss'],
 })
 export class ToolBarComponent {
-    constructor() {}
+    private user$: Observable<UserState>;
+
+    constructor(store: Store<AppState>) {
+        this.user$ = store.select('user');
+    }
 }

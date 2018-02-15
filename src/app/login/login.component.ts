@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'app-login',
@@ -18,9 +19,6 @@ export class LoginComponent {
                 const token = result.credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
-                // ...
-                console.log(token);
-                console.log(user);
             })
             .catch((error) => {
                 // Handle Errors here.
@@ -30,7 +28,6 @@ export class LoginComponent {
                 const email = error.email;
                 // The firebase.auth.AuthCredential type that was used.
                 const credential = error.credential;
-                // ...
             });
     }
 }

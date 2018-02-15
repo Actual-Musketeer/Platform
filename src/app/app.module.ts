@@ -13,10 +13,11 @@ import { LoginModule } from './login/login.module';
 import { MaterialModule } from './material/material.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { SettingsModule } from './settings/settings.module';
-import { ToolBarComponent } from './tool-bar/tool-bar.component';
+import { AppStoreModule } from './store/app-store.module';
+import { ToolBarModule } from './tool-bar/tool-bar.module';
 
 @NgModule({
-    declarations: [AppComponent, ToolBarComponent],
+    declarations: [AppComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -26,9 +27,11 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
         AngularFireDatabaseModule,
         AngularFireAuthModule,
         MaterialModule,
+        AppStoreModule,
         PortfolioModule,
         SettingsModule,
         LoginModule,
+        ToolBarModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

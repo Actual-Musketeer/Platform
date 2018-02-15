@@ -1,0 +1,3 @@
+interface AppState {
+    user: UserState;
+}
