@@ -1,7 +1,7 @@
 {
     "version": "0.1",
     "language": "en",
-    "words": ["truthy", "polyfills", "classlist", "injectable", "angularfire"],
+    "words": ["truthy", "polyfills", "classlist", "injectable", "angularfire", "ngrx"],
     "flagWords": ["hte"],
     "ignorePaths": ["**/node_modules/**", "**/vscode-extension/**", "**/.git/**", ".vscode", "typings", "resources"]
   }

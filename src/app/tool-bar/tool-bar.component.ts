@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
+
+import * as User from '../store/user';
 
 @Component({
     selector: 'app-tool-bar',
@@ -10,7 +13,16 @@ import { Observable } from 'rxjs/Observable';
 export class ToolBarComponent {
     private user$: Observable<UserState>;
 
-    constructor(store: Store<AppState>) {
+    constructor(private store: Store<AppState>, private afAuth: AngularFireAuth) {
         this.user$ = store.select('user');
+    }
+
+    public logout(): void {
+        this.afAuth.auth.signOut().then(
+            () => this.store.dispatch(new User.RemoveUserAction()),
+            (error) => {
+                console.log(error);
+            },
+        );
     }
 }

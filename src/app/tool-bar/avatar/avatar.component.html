@@ -1,1 +1,4 @@
-<img *ngIf="photoUrl" [src]="photoUrl"> {{name}}
+<div fxLayout="row" fxLayoutAlign="center" fxFlexOffset="5px">
+    <img class="rounded avatar" *ngIf="photoUrl" [src]="photoUrl">
+    <div>{{name}}</div>
+</div>

@@ -5,11 +5,11 @@
     <span fxFlex></span>
 
     <button mat-button [matMenuTriggerFor]="moreMenu">
-        <app-avatar [photoUrl]="(user$ | async)?.data.photoURL" [name]="(user$ | async)?.data.displayName"></app-avatar>
+        <app-avatar [photoUrl]="(user$ | async)?.data?.photoURL" [name]="(user$ | async)?.data?.displayName"></app-avatar>
     </button>
 
     <mat-menu #moreMenu="matMenu">
         <button mat-menu-item routerLink="/settings">Settings</button>
-        <button mat-menu-item>Logout</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
     </mat-menu>
 </mat-toolbar>

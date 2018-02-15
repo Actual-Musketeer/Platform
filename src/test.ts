@@ -7,6 +7,9 @@ import {
     platformBrowserDynamicTesting,
 } from '@angular/platform-browser-dynamic/testing';
 
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
+
 declare const require: any;
 
 // First, initialize the Angular testing environment.

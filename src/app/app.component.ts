@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
 
         this.afAuth.authState.subscribe((user) => {
             console.log(user);
+            if (!user) {
+                return;
+            }
+
             this.store.dispatch(new User.SetUserAction({ data: user }));
         });
     }

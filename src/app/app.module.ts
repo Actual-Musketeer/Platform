@@ -13,6 +13,7 @@ import { LoginModule } from './login/login.module';
 import { MaterialModule } from './material/material.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { SettingsModule } from './settings/settings.module';
+import { SharedModule } from './shared/shared.module';
 import { AppStoreModule } from './store/app-store.module';
 import { ToolBarModule } from './tool-bar/tool-bar.module';
 
@@ -32,6 +33,7 @@ import { ToolBarModule } from './tool-bar/tool-bar.module';
         SettingsModule,
         LoginModule,
         ToolBarModule,
+        SharedModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
